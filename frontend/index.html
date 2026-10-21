@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student Registration</title><link rel="stylesheet" href="style.css"></head>
+<body><!-- Main registration form container -->
+<main class="card"><h1>Student Registration</h1><p class="muted">Enter the student details below.</p>
+<!-- novalidate lets our JavaScript display custom, field-specific messages. -->
+<form id="registrationForm" action="#" method="post" enctype="multipart/form-data" novalidate>
+<label for="name">Full name</label><input id="name" name="name" required maxlength="100" autocomplete="name"><small class="error" id="nameError"></small>
+<label for="roll">Roll number</label><input id="roll" name="roll_number" required maxlength="30"><small class="error" id="rollError"></small>
+<label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"><small class="error" id="emailError"></small>
+<label for="course">Course</label><select id="course" name="course" required><option value="">Choose a course</option><option>B.E. Computer Science and Engineering</option><option>B.E. Information Technology</option><option>B.Tech Artificial Intelligence and Data Science</option><option>B.E. Electronics and Communication Engineering</option></select><small class="error" id="courseError"></small>
+<label for="password">Password</label><input id="password" name="password" type="password" required autocomplete="new-password"><small class="hint">Use at least 8 characters, including uppercase, lowercase and a number.</small><small class="error" id="passwordError"></small>
+<label for="document">Profile image / document (optional)</label><input id="document" name="document" type="file" accept=".jpg,.jpeg,.png,.pdf"><small class="hint">Allowed: JPG, PNG, PDF. Maximum 2 MB.</small><small class="error" id="fileError"></small>
+<button type="submit">Validate Registration</button><p id="success" role="status"></p></form></main><script src="script.js"></script></body></html>
